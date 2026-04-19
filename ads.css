@@ -1,0 +1,203 @@
+.ads-box {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 3000;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.ads-content {
+    height: 100%;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-text {
+    font-size: 20px;
+    text-align: center;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    white-space: normal;
+    word-break: break-word;
+}
+
+.ads-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ads-btn:hover {
+    background: #03f1a2;
+}
+
+.fade {
+    animation: fade 0.6s ease-out, slowPulse 1.2s ease 0.6s 1;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slowPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide-left {
+    animation: slideLeft 0.6s;
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.scale {
+    animation: scale 0.4s ease-out, wiggle 0.6s ease 0.4s;
+    font-size: 16px;
+    color: var(--green);
+    padding: 10px;
+    border-radius: 12px;
+
+    box-shadow: 0 0 15px rgba(3, 241, 162, 0.7);
+}
+
+@keyframes scale {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* אות-אות */
+.letters span {
+    opacity: 0;
+    display: inline-block;
+    animation: letterIn 0.3s forwards;
+}
+
+@keyframes letterIn {
+    from {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.glow-effect {
+    color: white;
+    text-shadow: 0 0 10px #03f1a2, 0 0 20px #03f1a2;
+    font-weight: bold;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(6deg);
+    }
+
+    40% {
+        transform: rotate(-6deg);
+    }
+
+    60% {
+        transform: rotate(3deg);
+    }
+
+    80% {
+        transform: rotate(-3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.fill-green {
+    background: linear-gradient(90deg,
+            var(--green) 0%,
+            var(--green) 50%,
+            white 50%,
+            white 100%);
+
+    background-size: 200% 100%;
+    background-position: 100% 0;
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: fillGreen 3s ease forwards;
+}
+
+@keyframes fillGreen {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: 0% 0;
+    }
+}
+
+/* מובייל */
+@media (max-width: 768px) {
+    .ads-box {
+        display: none;
+    }
+}
