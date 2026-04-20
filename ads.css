@@ -3,23 +3,69 @@
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    width: 240px;
-    height: 200px;
+    width: 230px;
+    height: 400px;
     border-radius: 20px;
     overflow: hidden;
     z-index: 3000;
     background: rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.8);
+    border: black 5px solid;
 }
 
 .ads-content {
     height: 100%;
-    padding: 25px;
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+}
+
+.ads-content img {
+    width: 50px;
+    margin-top: 10px;
+}
+
+.ads-links {
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.ads-button {
+    border-radius: 50vh;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    border: none;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hand-icon {
+    position: absolute;
+    bottom: 0px;
+    font-size: 20px;
+    animation: bounceHand 1s infinite ease-in-out;
+}
+
+@keyframes bounceHand {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .ad-text {
@@ -29,7 +75,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    margin: 0 10px;
     flex-wrap: wrap;
     white-space: normal;
     word-break: break-word;
