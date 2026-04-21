@@ -47,7 +47,27 @@
     cursor: pointer;
 }
 
-.hand-icon {
+.ads-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.ads-form input {
+    height: 30px;
+}
+
+.ads-form textarea {
+    width: 100%;
+}
+
+#ads-button-form {
+    display: none;
+}
+
+#hand-icon {
     position: absolute;
     bottom: 0px;
     font-size: 20px;
@@ -93,7 +113,7 @@
 }
 
 .ads-btn:hover {
-    background: #03f1a2;
+    background: var(--green);
 }
 
 .fade {
@@ -149,7 +169,7 @@
     padding: 10px;
     border-radius: 12px;
 
-    box-shadow: 0 0 15px rgba(3, 241, 162, 0.7);
+    box-shadow: 0 0 15px var(--green);
 }
 
 @keyframes scale {
@@ -185,7 +205,7 @@
 
 .glow-effect {
     color: white;
-    text-shadow: 0 0 10px #03f1a2, 0 0 20px #03f1a2;
+    text-shadow: 0 0 10px var(--green), 0 0 20px var(--green);
     font-weight: bold;
 }
 

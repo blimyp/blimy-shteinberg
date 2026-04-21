@@ -22,9 +22,16 @@
         <div class="ads-content">
             <img src="logo-big.png" />
             <div id="ad-text" class="ad-text"></div>
+            <div id="ads-form" class="ads-form" style="display: none;">
+                <h3>צור קשר</h3>
+                <input type="text" placeholder="שם">
+                <input type="email" placeholder="אימייל">
+                <textarea placeholder="הודעה"></textarea>
+            </div>
             <div class="ads-links">
-                <button class="ads-button">דברו איתנו</button>
-                <i class="bi bi-hand-index-thumb-fill hand-icon"></i>
+                <button class="ads-button" id="ads-contact-btn">דברו איתנו</button>
+                <i class="bi bi-hand-index-thumb-fill" id="hand-icon"></i>
+                <button class="ads-button" id="ads-button-form">שלח<i class="bi bi-send-fill"></i></button>
             </div>
         </div>
     </div>
@@ -72,7 +79,7 @@
             </div>
         </div>
 
-        <button class="btn" id="contact-btn">צור קשר</button>
+        <button class="btn" id="contact-btn">דברו איתנו</button>
     </header>
 
     <section>
@@ -130,9 +137,18 @@
     <section>
         <h2 class="section-title">צור קשר</h2>
         <form id="contact-form">
-            <input type="text" name="name" placeholder="שם" required>
-            <input type="email" name="email" placeholder="אימייל" required>
-            <textarea name="message" rows="5" placeholder="הודעה" required></textarea>
+            <div class="input-wrapper">
+                <input type="text" name="name" placeholder="שם" required>
+                <i class="bi bi-envelope"></i>
+            </div>
+            <div class="input-wrapper">
+                <input type="email" name="email" placeholder="אימייל" required>
+                <i class="bi bi-person-circle"></i>
+            </div>
+            <div class="input-wrapper">
+                <textarea name="message" rows="5" placeholder="הודעה" required></textarea>
+                <i class="bi bi-pencil-square"></i>
+            </div>
             <button type="submit" class="btn">שלח</button>
         </form>
     </section>

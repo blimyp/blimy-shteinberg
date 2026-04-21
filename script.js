@@ -120,3 +120,13 @@ document.getElementById("contact-btn").addEventListener("click", function () {
         behavior: "smooth"
     });
 });
+
+const btn = document.getElementById("ads-contact-btn");
+
+btn.addEventListener("click", () => {
+    document.getElementById("ad-text").style.display = "none";
+    document.getElementById("ads-form").style.display = "flex";
+    document.getElementById("ads-contact-btn").style.display = "none";
+    document.getElementById("hand-icon").style.display = "none";
+    document.getElementById("ads-button-form").style.display = "block";
+});
