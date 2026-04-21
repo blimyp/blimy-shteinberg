@@ -278,7 +278,7 @@ header p {
 
 section {
     padding: 80px 20px;
-    max-width: 1100px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -387,15 +387,26 @@ section {
 .project {
     flex: 1;
     min-width: 250px;
-    background: #1e293b;
+    background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 15px;
-    transition: 0.3s;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: center;
+    border: 2px transparent solid;
 }
 
 .project:hover {
+    background-color: transparent;
+    border: 2px white solid;
     transform: scale(1.05);
-    background: linear-gradient(135deg, var(--blue), var(--purple));
+}
+
+.project img {
+    width: 100%;
 }
 
 form {

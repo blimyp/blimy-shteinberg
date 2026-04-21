@@ -114,3 +114,9 @@ form.addEventListener("submit", function (e) {
         }
     );
 });
+
+document.getElementById("contact-btn").addEventListener("click", function () {
+    document.getElementById("contact-form").scrollIntoView({
+        behavior: "smooth"
+    });
+});
