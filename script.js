@@ -98,22 +98,32 @@ const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
+    sendEmail(this);
+});
 
+const adsForm = document.getElementById("ads-form");
+
+adsForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    sendEmail(this);
+});
+
+function sendEmail(formData) {
     emailjs.sendForm(
         "service_z4cxu6c",
         "template_hunj01l",
-        this
+        formData
     ).then(
         function () {
             alert("הפניה נשלחה בהצלחה!");
-            form.reset();
+            formData.reset();
         },
         function (error) {
             alert("שגיאה בשליחה");
             console.log(error);
         }
     );
-});
+}
 
 document.getElementById("contact-btn").addEventListener("click", function () {
     document.getElementById("contact-form").scrollIntoView({

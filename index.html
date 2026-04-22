@@ -22,16 +22,18 @@
         <div class="ads-content">
             <img src="logo-big.png" />
             <div id="ad-text" class="ad-text"></div>
-            <div id="ads-form" class="ads-form" style="display: none;">
+            <form id="ads-form" class="ads-form" style="display: none;">
                 <h3>צור קשר</h3>
-                <input type="text" placeholder="שם">
-                <input type="email" placeholder="אימייל">
-                <textarea placeholder="הודעה"></textarea>
-            </div>
+                <input type="text" name="name" placeholder="שם">
+                <input type="email" name="email" placeholder="אימייל">
+                <textarea name="message" placeholder="הודעה"></textarea>
+                <button class="ads-button" id="ads-button-form" type="submit">
+                    שלח<i class="bi bi-send-fill"></i>
+                </button>
+            </form>
             <div class="ads-links">
                 <button class="ads-button" id="ads-contact-btn">דברו איתנו</button>
                 <i class="bi bi-hand-index-thumb-fill" id="hand-icon"></i>
-                <button class="ads-button" id="ads-button-form">שלח<i class="bi bi-send-fill"></i></button>
             </div>
         </div>
     </div>
