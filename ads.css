@@ -261,8 +261,26 @@
     }
 }
 
+@media (min-width: 1800px) {
+    .ads-box {
+        left: 200px;
+    }
+}
+
 /* מובייל */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .ads-box {
+        width: 200px;
+        height: 350px;
+        left: 10px;
+    }
+
+    .ads-form {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1100px) {
     .ads-box {
         display: none;
     }

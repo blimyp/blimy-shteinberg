@@ -2,7 +2,7 @@
     emailjs.init("a9upb4z0sKTekMhII");
 })();
 
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.feature-card');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

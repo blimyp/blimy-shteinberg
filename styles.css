@@ -143,7 +143,7 @@ header p {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 20px;
+    margin: 20px 30px;
     flex-wrap: wrap;
 }
 
@@ -162,6 +162,7 @@ header p {
     position: relative;
     backdrop-filter: blur(10px);
     transition: 0.4s;
+    animation: float 4s ease-in-out infinite;
 }
 
 /* DARKER ON HOVER */
@@ -226,10 +227,6 @@ header p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.circle {
-    animation: float 4s ease-in-out infinite;
-}
-
 @keyframes float {
 
     0%,
@@ -239,23 +236,6 @@ header p {
 
     50% {
         transform: translateY(-10px);
-    }
-}
-
-@media (max-width: 768px) {
-    .circle {
-        width: 100px;
-        height: 100px;
-    }
-
-    .text {
-        font-size: 16px;
-    }
-
-    .number {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
     }
 }
 
@@ -338,7 +318,7 @@ section {
     opacity: 0.9;
 }
 
-.card {
+.feature-card {
     height: 180px;
     width: 180px;
     display: flex;
@@ -356,11 +336,11 @@ section {
     position: relative;
 }
 
-.card:hover {
+.feature-card:hover {
     border-radius: 40% 60% 40% 60%;
 }
 
-.card::after {
+.feature-card::after {
     content: "";
     position: absolute;
     width: 100%;
@@ -373,13 +353,14 @@ section {
     pointer-events: none;
 }
 
-.card.show {
+.feature-card.show {
     transform: translateX(0);
     opacity: 1;
 }
 
 .projects {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -387,6 +368,7 @@ section {
 .project {
     flex: 1;
     min-width: 250px;
+    max-width: 400px;
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
     border-radius: 15px;
@@ -506,5 +488,43 @@ footer {
 
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 750px) {
+    .circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .number {
+        width: 80px;
+        height: 80px;
+        top: -30px;
+        right: -30px;
+    }
+
+    .feature-row{
+        gap: 20px;
+    }
+
+    .feature-card {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 6rem;
+    }
+
+    .feature-row.right,
+    .feature-row.left {
+        flex-direction: column;
+    }
+
+    .feature-desc {
+        text-align: center;
     }
 }
