@@ -431,9 +431,35 @@ textarea {
     background: linear-gradient(90deg, var(--purple) 0%, var(--green) 100%);
 }
 
+
+.input-wrapper i::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.2);
+}
+
 .input-wrapper input,
 .input-wrapper textarea {
     padding-right: 50px;
+}
+
+.form-button-wrapper {
+    position: relative;
+    text-align: center;
+}
+
+.form-button-wrapper button {
+    width: 200px;
+}
+
+.form-button-wrapper i {
+    font-size: 28px;
+    position: absolute;
+    bottom: -20px;
+    right: calc(50% + 60px);
+    color: black;
+    animation: bounceHand 1s infinite ease-in-out;
 }
 
 footer {
@@ -504,7 +530,7 @@ footer {
         right: -30px;
     }
 
-    .feature-row{
+    .feature-row {
         gap: 20px;
     }
 
