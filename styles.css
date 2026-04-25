@@ -289,7 +289,7 @@ section {
 .features-vertical {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
     max-width: 600px;
     margin: auto;
 }
@@ -315,7 +315,18 @@ section {
     max-width: 400px;
     font-size: 20px;
     line-height: 1.6;
-    opacity: 0.9;
+}
+
+.more-btn {
+    color: var(--green);
+    padding: 10px;
+    border-radius: 50vh;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.more-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .feature-card {
@@ -327,7 +338,8 @@ section {
     padding: 20px;
     border-radius: 60% 40% 60% 40%;
     text-align: center;
-    box-shadow: 0 0 200px white;
+    /* box-shadow: 0 0 200px white; */
+    background-color: rgba(0, 0, 0, 0.2);
     transform: translateX(-100px);
     opacity: 0;
     transition: 1s;
