@@ -115,7 +115,7 @@ function sendEmail(formData) {
         formData
     ).then(
         function () {
-            alert("הפניה נשלחה בהצלחה!");
+            showPopup();
             formData.reset();
         },
         function (error) {
@@ -123,6 +123,63 @@ function sendEmail(formData) {
             console.log(error);
         }
     );
+}
+
+const popup = document.getElementById("success-popup");
+const overlay = document.getElementById("overlay");
+
+function showPopup() {
+    popup.classList.remove("hide");
+    popup.classList.add("show");
+    overlay.classList.remove("hide");
+    overlay.classList.add("show");
+    setTimeout(() => {
+        createBubbles();
+    }, 500);
+}
+
+const closeBtn = document.getElementById("close-popup");
+
+closeBtn.addEventListener("click", () => {
+    popup.classList.remove("show");
+    popup.classList.add("hide");
+    overlay.classList.remove("show");
+    overlay.classList.add("hide");
+});
+
+function createBubbles() {
+    const colors = ["var(--green)", "var(--blue)", "var(--purple)"];
+
+    for (let i = 0; i < 30; i++) {
+        const bubble = document.createElement("div");
+        bubble.classList.add("bubble");
+
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        bubble.style.background = `radial-gradient(circle, white, ${color})`;
+
+        // מיקום התחלתי – מרכז הפופאפ
+        const rect = popup.getBoundingClientRect();
+        const startX = rect.left + rect.width / 2;
+        const startY = rect.top + rect.height / 2;
+
+        bubble.style.left = startX + "px";
+        bubble.style.top = startY + "px";
+
+        // כיוון רנדומלי
+        const x = (Math.random() - 0.5) * 1600;
+        const y = (Math.random() - 0.5) * 1600;
+
+        bubble.style.setProperty("--x", `${x}px`);
+        bubble.style.setProperty("--y", `${y}px`);
+
+        bubble.style.animation = `bubbleMove 3.5s ease-out forwards`;
+
+        document.body.appendChild(bubble);
+
+        setTimeout(() => {
+            bubble.remove();
+        }, 4000);
+    }
 }
 
 document.getElementById("contact-btn").addEventListener("click", function () {
