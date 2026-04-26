@@ -111,7 +111,7 @@ header {
     }
 }
 
-header p {
+.header-p {
     font-size: 28px;
     animation: fadeIn 3s ease;
 }
@@ -131,7 +131,7 @@ header p {
     width: 40px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    box-shadow: 0 0 30px white;
+    box-shadow: 0 2px 3px black;
 }
 
 .effect_text .small_effect {
@@ -239,21 +239,30 @@ header p {
     }
 }
 
+.contact-div{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 24px;
+}
+
 .btn {
-    margin-top: 30px;
-    padding: 15px 30px;
+    padding: 15px 40px;
     color: var(--green);
-    border: 3px solid white;
+    border: none;
+    box-shadow: 2px 4px 5px black, inset 2px 2px 5px rgba(0, 0, 0, 0.5);
     background-color: transparent;
     border-radius: 30px;
     cursor: pointer;
     font-weight: bold;
     transition: 0.3s;
+    font-size: 20px;
 }
 
 .btn:hover {
-    background: var(--green);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 section {

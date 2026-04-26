@@ -10,9 +10,9 @@
     text-shadow: 0 0 20px var(--green),
         0 0 30px var(--green),
         0 0 4px var(--green);
-    ;
 }
 
 .blog-text {
     line-height: 2;
+    text-align: right;
 }

@@ -108,17 +108,23 @@ adsForm.addEventListener("submit", function (e) {
     sendEmail(this);
 });
 
+const loading = document.getElementById("loading");
+
 function sendEmail(formData) {
+    loading.classList.add("show");
+
     emailjs.sendForm(
         "service_z4cxu6c",
         "template_hunj01l",
         formData
     ).then(
         function () {
+            loading.classList.remove("show");
             showPopup();
             formData.reset();
         },
         function (error) {
+            loading.classList.remove("show");
             alert("שגיאה בשליחה");
             console.log(error);
         }
