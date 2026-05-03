@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://blimy-shteinberg.netlify.app/index.html</loc>
+        <loc>https://blimy-shteinberg.netlify.app/index</loc>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-modern-sites.html</loc>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-modern-sites</loc>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-digital-marketing.html</loc>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-digital-marketing</loc>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-ux.html</loc>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-ux</loc>
         <priority>0.8</priority>
     </url>
 
