@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blimy-shteinberg.netlify.app/sitemap.xml
