@@ -155,7 +155,7 @@ header {
     position: relative;
 }
 
-.circle {
+.step-circle {
     width: 180px;
     height: 180px;
     background: rgba(0, 0, 0, 0.3);
@@ -170,13 +170,13 @@ header {
 }
 
 /* DARKER ON HOVER */
-.circle:hover {
+.step-circle:hover {
     transform: scale(1.08) rotate(2deg);
     background: rgba(0, 0, 0, 0.55);
 }
 
 /* GREEN BORDER ANIMATION */
-.circle::before {
+.step-circle::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -186,7 +186,7 @@ header {
     transition: clip-path 0.6s ease;
 }
 
-.circle:hover::before {
+.step-circle:hover::before {
     clip-path: inset(0 0 0 0);
 }
 
@@ -208,11 +208,11 @@ header {
     width: 100%;
 }
 
-.circle:hover .text {
+.step-circle:hover .text {
     transform: translateY(-60%);
 }
 
-.circle:hover .subtitle {
+.step-circle:hover .subtitle {
     opacity: 1;
 }
 
@@ -548,7 +548,7 @@ footer a {
 }
 
 @media (max-width: 750px) {
-    .circle {
+    .step-circle {
         width: 160px;
         height: 160px;
     }
