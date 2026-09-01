@@ -1,0 +1,127 @@
+.final-cta {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.final-cta-small {
+    color: var(--green);
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.final-cta-title {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.final-cta-title span {
+    color: var(--green);
+    text-shadow:
+        0 0 10px rgba(3, 241, 162, 0.5),
+        0 0 25px rgba(3, 241, 162, 0.2);
+}
+
+.final-cta-text {
+    max-width: 650px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+
+.final-cta-highlight {
+    margin: 35px 0;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+/* =========================
+   אנימציית כניסה
+========================= */
+
+.reveal-cta {
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal-cta.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-cta .final-cta-small,
+.reveal-cta .final-cta-title,
+.reveal-cta .final-cta-text,
+.reveal-cta .final-cta-highlight,
+.reveal-cta .final-cta-btn {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal-cta.show .final-cta-small {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.15s;
+}
+
+.reveal-cta.show .final-cta-title {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.3s;
+}
+
+.reveal-cta.show .final-cta-text {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.45s;
+}
+
+.reveal-cta.show .final-cta-highlight {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+
+.reveal-cta.show .final-cta-btn {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.75s;
+}
+
+
+/* מובייל */
+@media (max-width: 600px) {
+
+    .final-cta {
+        padding: 60px 20px;
+        margin: 40px auto;
+    }
+
+    .final-cta-title {
+        font-size: 34px;
+    }
+
+    .final-cta-text {
+        font-size: 17px;
+    }
+
+    .final-cta-highlight {
+        font-size: 23px;
+    }
+}

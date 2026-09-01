@@ -188,9 +188,11 @@ function createBubbles() {
     }
 }
 
-document.getElementById("contact-btn").addEventListener("click", function () {
-    document.getElementById("contact-form").scrollIntoView({
-        behavior: "smooth"
+document.querySelectorAll(".contact-scroll-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        document.getElementById("contact-form").scrollIntoView({
+            behavior: "smooth"
+        });
     });
 });
 
@@ -203,3 +205,20 @@ btn.addEventListener("click", () => {
     document.getElementById("hand-icon").style.display = "none";
     document.getElementById("ads-button-form").style.display = "block";
 });
+
+const cta = document.querySelector(".reveal-cta");
+
+const ctaObserver = new IntersectionObserver(
+    ([entry]) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+if (cta) {
+    ctaObserver.observe(cta);
+}
