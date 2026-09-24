@@ -1,6 +1,6 @@
 .final-cta {
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto 80px;
     padding: 80px 30px;
     text-align: center;
     position: relative;
@@ -110,7 +110,7 @@
 
     .final-cta {
         padding: 60px 20px;
-        margin: 40px auto;
+        margin: 0 auto 60px;
     }
 
     .final-cta-title {
