@@ -405,7 +405,6 @@ section.services-section {
     line-height: 1;
     color: transparent;
     -webkit-text-stroke: 2px var(--green);
-    opacity: 0.6;
     margin-bottom: 10px;
 }
 
@@ -754,5 +753,54 @@ footer a {
 @media (prefers-reduced-motion: reduce) {
     .title-icon {
         animation: none;
+    }
+}
+
+/* כפתור חזרה לראש העמוד */
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 900;
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.95));
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid var(--green);
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s, visibility 0.3s, box-shadow 0.3s;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+}
+
+.back-to-top:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .back-to-top {
+        width: 46px;
+        height: 46px;
+        bottom: 18px;
+        right: 18px;
     }
 }
