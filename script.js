@@ -224,7 +224,8 @@ if (cta) {
 }
 // היפוך קלפי השאלות בלחיצה ובמקלדת
 document.querySelectorAll(".faq-card").forEach(card => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", e => {
+        if (e.target.closest("a")) return;
         card.classList.toggle("flipped");
     });
 

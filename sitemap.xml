@@ -21,4 +21,34 @@
         <priority>0.8</priority>
     </url>
 
+    <url>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-website-price</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-website-time</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-professional-website</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-digital-presence</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-mobile-website</loc>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://blimy-shteinberg.netlify.app/blogs/blog-website-preparation</loc>
+        <priority>0.7</priority>
+    </url>
+
 </urlset>

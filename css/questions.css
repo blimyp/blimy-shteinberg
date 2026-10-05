@@ -13,7 +13,7 @@
 }
 
 .faq-card {
-    height: 200px;
+    height: 250px;
     perspective: 1200px;
     cursor: pointer;
     outline: none;
@@ -123,6 +123,45 @@
     color: white;
 }
 
+/* כפתור "למידע נוסף" בגב הקלף */
+.faq-card-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 20px;
+    border-radius: 50vh;
+    color: var(--green);
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    background: rgba(15, 23, 42, 0.35);
+    transition: background 0.3s, box-shadow 0.3s;
+    pointer-events: none;
+}
+
+.faq-card-more i {
+    transition: transform 0.3s;
+}
+
+.faq-card-more:hover {
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.faq-card-more:hover i {
+    transform: translateX(-4px);
+}
+
+/* הכפתור לחיץ רק כשהצד של התשובה גלוי */
+.faq-card.flipped .faq-card-more {
+    pointer-events: auto;
+}
+
+@media (hover: hover) {
+    .faq-card:hover .faq-card-more {
+        pointer-events: auto;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .faq-card-inner {
         transition: none;
@@ -136,7 +175,7 @@
     }
 
     .faq-card {
-        height: 230px;
+        height: 280px;
     }
 
     .faq-card-front h3 {
