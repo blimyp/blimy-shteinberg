@@ -16,7 +16,6 @@
     box-sizing: border-box;
     font-family:
         'DynaPuff',
-        /* 'Varela Round', */
         'GveretLevin',
         sans-serif;
     letter-spacing: 2px;
@@ -305,31 +304,6 @@ section {
     mask-composite: exclude;
     filter: drop-shadow(0 0 6px rgba(3, 241, 162, 0.8));
     pointer-events: none;
-}
-
-.explanation,
-.faq-item {
-    max-width: 760px;
-    width: 100%;
-    margin-inline: auto;
-}
-
-.explanation {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 20px;
-}
-
-.explanation_text {
-    font-weight: bold;
-}
-
-.features {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
 section.services-section {

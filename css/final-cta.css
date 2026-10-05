@@ -65,8 +65,7 @@
 .reveal-cta .final-cta-small,
 .reveal-cta .final-cta-title,
 .reveal-cta .final-cta-text,
-.reveal-cta .final-cta-highlight,
-.reveal-cta .final-cta-btn {
+.reveal-cta .final-cta-highlight {
     opacity: 0;
     transform: translateY(25px);
     transition:
@@ -98,14 +97,86 @@
     transition-delay: 0.6s;
 }
 
-.reveal-cta.show .final-cta-btn {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0.75s;
+.why-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
 }
 
+.why-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: 24px;
+    transition: background 0.4s, box-shadow 0.4s;
+}
 
-/* מובייל */
+/* מרובע כהה שמופיע מתחת לכל הכרטיס במעבר */
+.why-card:hover {
+    background: rgba(15, 23, 42, 0.4);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.3);
+}
+
+/* אריח מעוגל בסגנון אפליקציה */
+.why-card i {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 28px;
+    color: #0f172a;
+    background: linear-gradient(135deg, var(--green), #22d3ee);
+    box-shadow: 0 10px 25px rgba(3, 241, 162, 0.4);
+    transform: rotate(-8deg);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.why-card:hover i {
+    transform: rotate(0deg) scale(1.08);
+    box-shadow: 0 14px 30px rgba(3, 241, 162, 0.6);
+}
+
+/* מסגרת צפה ולא מדויקת סביב האריח */
+.why-card i::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid white;
+    transform: translate(5px, -5px) rotate(14deg);
+    transition: transform 0.4s;
+    pointer-events: none;
+}
+
+.why-card:hover i::after {
+    transform: translate(5px, -5px) rotate(4deg);
+}
+
+.why-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    transition: color 0.4s;
+}
+
+.why-card:hover p {
+    color: var(--green);
+}
+
+@media (max-width: 800px) {
+    .why-cards {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        margin: auto;
+    }
+}
+
 @media (max-width: 600px) {
 
     .final-cta {
