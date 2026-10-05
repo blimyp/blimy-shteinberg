@@ -94,10 +94,74 @@ function showAd() {
 showAd();
 setInterval(showAd, 3000);
 
+// בדיקת שדות הטופס עם הודעות שגיאה בעיצוב של האתר
+function getFieldError(field) {
+    if (field.validity.valueMissing || !field.value.trim()) {
+        return "שדה חובה";
+    }
+    if (field.validity.typeMismatch) {
+        return "כתובת האימייל לא תקינה";
+    }
+    return "";
+}
+
+function showFieldError(field, message) {
+    let error = field.parentElement.querySelector(`.field-error[data-for="${field.name}"]`);
+
+    if (!message) {
+        field.classList.remove("field-invalid");
+        if (error) error.remove();
+        return;
+    }
+
+    if (!error) {
+        error = document.createElement("span");
+        error.className = "field-error";
+        error.dataset.for = field.name;
+        field.insertAdjacentElement("afterend", error);
+    }
+
+    error.textContent = message;
+    field.classList.remove("field-invalid");
+    void field.offsetWidth; // מאפשר לאנימציית הרעידה לרוץ שוב
+    field.classList.add("field-invalid");
+}
+
+function validateForm(formElement) {
+    let firstInvalid = null;
+
+    formElement.querySelectorAll("input, textarea").forEach(field => {
+        const message = getFieldError(field);
+        showFieldError(field, message);
+        if (message && !firstInvalid) firstInvalid = field;
+    });
+
+    if (firstInvalid) firstInvalid.focus();
+    return !firstInvalid;
+}
+
+// ההודעה נעלמת ברגע שמתחילים לתקן את השדה
+document.querySelectorAll("#contact-form, #ads-form").forEach(formElement => {
+    formElement.querySelectorAll("input, textarea").forEach(field => {
+        field.addEventListener("input", () => {
+            if (!field.classList.contains("field-invalid")) return;
+
+            const message = getFieldError(field);
+            if (!message) {
+                showFieldError(field, "");
+            } else {
+                const error = field.parentElement.querySelector(`.field-error[data-for="${field.name}"]`);
+                if (error) error.textContent = message;
+            }
+        });
+    });
+});
+
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (!validateForm(this)) return;
     sendEmail(this);
 });
 
@@ -105,6 +169,7 @@ const adsForm = document.getElementById("ads-form");
 
 adsForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (!validateForm(this)) return;
     sendEmail(this);
 });
 

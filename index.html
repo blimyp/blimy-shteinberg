@@ -24,11 +24,11 @@
         <div class="ads-content">
             <img src="images/logo-big.png" />
             <div id="ad-text" class="ad-text"></div>
-            <form id="ads-form" class="ads-form" style="display: none;">
+            <form id="ads-form" class="ads-form" style="display: none;" novalidate>
                 <h3>צור קשר</h3>
-                <input type="text" name="name" placeholder="שם">
-                <input type="email" name="email" placeholder="אימייל">
-                <textarea name="message" placeholder="הודעה"></textarea>
+                <input type="text" name="name" placeholder="שם*" required>
+                <input type="email" name="email" placeholder="אימייל*" required>
+                <textarea name="message" placeholder="הודעה*" required></textarea>
                 <button class="ads-button" id="ads-button-form" type="submit">
                     שלח<i class="bi bi-send-fill"></i>
                 </button>
@@ -314,17 +314,17 @@
 
     <section>
         <h2 class="section-title"><i class="bi bi-chat-heart title-icon" aria-hidden="true"></i>צור קשר</h2>
-        <form id="contact-form">
+        <form id="contact-form" novalidate>
             <div class="input-wrapper">
-                <input type="text" name="name" placeholder="שם" required>
+                <input type="text" name="name" placeholder="שם*" required>
                 <i class="bi bi-envelope"></i>
             </div>
             <div class="input-wrapper">
-                <input type="email" name="email" placeholder="אימייל" required>
+                <input type="email" name="email" placeholder="אימייל*" required>
                 <i class="bi bi-person-circle"></i>
             </div>
             <div class="input-wrapper">
-                <textarea name="message" rows="5" placeholder="הודעה" required></textarea>
+                <textarea name="message" rows="5" placeholder="הודעה*" required></textarea>
                 <i class="bi bi-pencil-square"></i>
             </div>
             <div class="form-button-wrapper">

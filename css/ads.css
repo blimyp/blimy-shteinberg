@@ -272,3 +272,18 @@
         display: none;
     }
 }
+
+/* הודעות שגיאה קטנות בטופס הפרסומת */
+.ads-form .field-error {
+    align-self: flex-start;
+    margin-top: -6px;
+    font-size: 11px;
+    color: #db163a;
+}
+
+.ads-form .field-error::before {
+    width: 13px;
+    height: 13px;
+    font-size: 9px;
+    background: #db163a;
+}
