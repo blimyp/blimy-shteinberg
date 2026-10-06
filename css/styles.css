@@ -455,6 +455,8 @@ section.services-section {
     gap: 30px;
     text-align: center;
     border: 2px transparent solid;
+    color: white;
+    text-decoration: none;
 }
 
 .project:hover {
