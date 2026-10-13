@@ -14,11 +14,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+/* פונט ברירת מחדל - טקסט לקריאה */
+body {
+    font-family:
+        'DynaPuff',
+        'Fredoka',
+        sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+/* פונט לכותרות וטקסטים גדולים */
+h1,
+h2,
+h3,
+.hero-text,
+.header-p,
+.step-circle .number,
+.step-circle .text,
+.feature-number,
+.final-cta-small,
+.final-cta-highlight,
+.blog-cta-title,
+.blog-related-title {
     font-family:
         'DynaPuff',
         'GveretLevin',
         sans-serif;
     letter-spacing: 2px;
+}
+
+/* שאלות בכרטיסים - נשארות בפונט הקריא */
+.faq-card-front h3 {
+    font-family:
+        'DynaPuff',
+        'Fredoka',
+        sans-serif;
+    letter-spacing: normal;
 }
 
 body {
@@ -67,7 +106,7 @@ header {
 }
 
 .hero-title {
-    font-size: 10rem;
+    font-size: 160px;
     text-shadow: none;
     animation: slideDown 1s ease forwards, glowDelay 3s ease forwards;
     transition: all 2s ease;
@@ -200,7 +239,6 @@ header {
     position: absolute;
     bottom: 50px;
     padding: 0 10px;
-    font-size: 12px;
     opacity: 0;
     transition: 0.4s;
     text-align: center;
@@ -378,13 +416,13 @@ section.services-section {
 
 .feature-desc {
     max-width: 420px;
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.7;
 }
 
 .feature-number {
     display: block;
-    font-size: 70px;
+    font-size: 72px;
     font-weight: bold;
     line-height: 1;
     color: transparent;
@@ -638,7 +676,7 @@ footer a {
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: 6rem;
+        font-size: 96px;
     }
 
     section {
@@ -648,21 +686,21 @@ footer a {
     }
 
     .section-title {
-        font-size: 26px;
+        font-size: 24px;
         padding: 16px 30px;
         margin-bottom: 40px;
     }
 
     .feature-number {
-        font-size: 55px;
+        font-size: 56px;
     }
 
     .feature-title {
-        font-size: 30px;
+        font-size: 32px;
     }
 
     .feature-desc {
-        font-size: 19px;
+        font-size: 20px;
     }
 }
 
@@ -726,7 +764,7 @@ footer a {
     .title-icon {
         width: 46px;
         height: 46px;
-        font-size: 19px;
+        font-size: 20px;
         top: -26px;
         right: -16px;
     }
@@ -804,7 +842,7 @@ footer a {
     gap: 6px;
     margin-top: 6px;
     padding-right: 6px;
-    font-size: 14px;
+    font-size: 16px;
     color: #9c0f28;
     text-align: right;
     animation: errorIn 0.3s ease;
@@ -820,7 +858,7 @@ footer a {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     color: white;
     background: #9c0f28;

@@ -55,7 +55,7 @@
 
 .final-cta-highlight {
     margin: 35px 0;
-    font-size: 27px;
+    font-size: 28px;
     font-weight: bold;
 }
 
@@ -174,7 +174,7 @@
 }
 
 .why-card p {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.7;
     transition: color 0.4s;
 }
@@ -199,14 +199,14 @@
     }
 
     .final-cta-title {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .final-cta-text {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .final-cta-highlight {
-        font-size: 23px;
+        font-size: 24px;
     }
 }
